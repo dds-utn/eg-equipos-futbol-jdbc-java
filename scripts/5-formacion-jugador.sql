@@ -106,7 +106,7 @@ select 2, jugador_id
  insert into formacion_jugador
 select 2, jugador_id
   from jugadores
- where nombre = 'Agüero';
+ where nombre = 'Aguero';
  
  select j.nombre
    from formacion_jugador fj, jugadores j

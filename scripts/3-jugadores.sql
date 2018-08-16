@@ -96,7 +96,7 @@ values ('Bustos Montoya');
 
 insert into jugadores
 (nombre)
-values ('Agüero');
+values ('Aguero');
 
 insert into jugadores
 (nombre)
