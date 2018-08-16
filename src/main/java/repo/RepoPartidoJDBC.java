@@ -11,20 +11,13 @@ import model.Equipo;
 import model.Formacion;
 import model.Partido;
 
-public class RepoPartidoJDBC {
+public class RepoPartidoJDBC implements RepoPartido {
 
 	private BasicDataSource dataSource;
 
-	public RepoPartidoJDBC(String db) {
-		dataSource = new BasicDataSource();
-		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUsername("root");
-		dataSource.setPassword("mysql");
-		dataSource.setUrl("jdbc:mysql://localhost/" + db);
-		dataSource.setMaxTotal(10);
-		dataSource.setMaxIdle(5);
-		dataSource.setInitialSize(5);
-		dataSource.setValidationQuery("SELECT 1");
+	public RepoPartidoJDBC(BasicDataSource dataSource) {
+		super();
+		this.dataSource = dataSource;
 	}
 
 	public Partido getPartido(Equipo local, Equipo visitante) {
