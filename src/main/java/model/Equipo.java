@@ -1,7 +1,5 @@
 package model;
 
-import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
-
 public class Equipo {
 	private int id;
 	private String name;
