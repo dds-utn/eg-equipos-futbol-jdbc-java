@@ -11,10 +11,12 @@ public class Runner {
 
 	public static void main(String[] args) {
 		
-		Equipo local = new Equipo(1, null);
-		Equipo visitante = new Equipo(2, null);
-		Partido partido = repo.getPartido(local, visitante);
-		System.out.println(partido);
 		RepoPartido repo = new RepoPartidoJDBC(DatasourceFactory.createDatasource(DB));
+		
+		Equipo local = new Equipo(1, "boca");
+		Equipo visitante = new Equipo(2, "independiente");
+		System.out.println(repo.getPartido(local, visitante));
+		System.out.println(repo.getPartido(local, visitante));
+
 	}
 }
